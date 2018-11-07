@@ -1,0 +1,24 @@
+{
+  "selector": "source.js",
+
+  "cmd": [
+    "esvalidate",
+    "--format=$packages/sublime-esprima/formats/sublime.js",
+    "$file"
+  ],
+
+  "file_regex": "esvalidate: (.+)\\]",
+  "line_regex": "(\\d+),(\\d+): (.*)$",
+
+  "osx": {
+    "path": "/usr/local/share/npm/bin:/usr/local/bin:/opt/local/bin:$PATH"
+  },
+
+  "windows": {
+    "cmd": [
+      "esvalidate.cmd",
+      "--format=$packages/sublime-esprima/formats/sublime.js",
+      "$file"
+    ]
+  }
+}

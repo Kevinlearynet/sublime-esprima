@@ -1,0 +1,18 @@
+{
+	"schema_version": "2.0",
+	"packages": [ {
+		"name": "Esprima",
+		"details": "https://github.com/Kevinlearynet/sublime-esprima",
+		"releases": [ {
+			"sublime_text": "*",
+			"details": "https://github.com/Kevinlearynet/sublime-esprima/tags"
+		} ],
+		"description": "Validate the syntax of any JavaScript files in Sublime Text 3 using Esprima with JSX syntax support.",
+		"author": "Kevin Leary",
+		"homepage": "https://github.com/Kevinlearynet/sublime-esprima",
+		"last_modified": "2018-11-07 00:00:00",
+		"readme": "https://raw.github.com/Kevinlearynet/sublime-esprima/master/README.md",
+		"previous_names": [ "JsValidate" ],
+		"labels": [ "JavaScript", "js", "validation", "validate", "linting", "jsx", "esprima", "esvalidate" ]
+	} ]
+}
