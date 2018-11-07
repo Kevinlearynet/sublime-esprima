@@ -7,7 +7,7 @@
       {
         "id": "esprima",
         "caption": "Esprima",
-        "command": "esprima"
+        "command": "esvalidate"
       }
     ]
   },

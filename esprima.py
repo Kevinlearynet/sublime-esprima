@@ -9,7 +9,7 @@ SETTINGS_FILE = 'esprima.sublime-settings'
 class EsprimaCommand(sublime_plugin.TextCommand):
   def run(self, edit):
     settings = sublime.load_settings(SETTINGS_FILE)
-    cmd = settings.get('esprima', 'esprima')
+    cmd = settings.get('esvalidator', 'esvalidator')
 
     filepath = self.view.file_name()
     args = {
@@ -19,7 +19,7 @@ class EsprimaCommand(sublime_plugin.TextCommand):
         filepath
       ],
       'line_regex': settings.get('line_regex', r"(\d+),(\d+): (.*)$"),
-      'file_regex': settings.get('file_regex', r"esprima (.+)\]")
+      'file_regex': settings.get('file_regex', r"esvalidator (.+)\]")
     }
 
     if sublime.platform() == "windows":
@@ -35,5 +35,5 @@ class EsprimaOnSave(sublime_plugin.EventListener):
     if settings.get('run_on_save', False) == False:
       return
     if re.search(settings.get('filename_filter'), view.file_name()):
-      view.window().run_command("esprima")
+      view.window().run_command("esvalidator")
       return
